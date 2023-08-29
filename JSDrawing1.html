@@ -1,0 +1,36 @@
+<html>
+
+    <body>
+        <canvas width="600" height="600">
+
+        </canvas>
+
+        <script>
+            // document is a JS object to refer to THIS document.
+            // querySelector() allows you to select an HTML element by it's tag,
+            // In this case, we select the canvas we declared above ^^^ 
+            let canvas = document.querySelector('canvas');
+            // context is what we need to generate within our canvas to draw on.
+            // (Can be 2d or 3d)  
+            let context = canvas.getContext('2d');
+            
+            // EXERCISE 1: Drawing a rectangle within the context canvas
+            // fillStyle property changes attributes from defaults stored in context object
+            // fillRect params: Offset x, Offset Y, length, height
+            context.beginPath();
+            context.rect(100, 100, 400,400);
+            //context.fill()      // for fill.
+            context.stroke()    // for outline.
+
+            // EXERCISE 2: Drawing a circle
+            context.beginPath();
+            context.arc(300,300,100,0,Math.PI * 2);
+            context.stroke();
+
+
+
+
+        </script>
+    </body>
+
+</html>
